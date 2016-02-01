@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Require-Bundle: org.nuxeo.runtime
+Bundle-Vendor: Athento
+Bundle-Version: 1.0
+Bundle-Name: Example import CSV
+Created-By: Athento
+Nuxeo-Component: OSGI-INF/event-handler-contrib.xml,OSGI-INF/scheduler
+ -contrib.xml,OSGI-INF/operations-contrib.xml
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: athento-nx-csv-scheduler-example
+

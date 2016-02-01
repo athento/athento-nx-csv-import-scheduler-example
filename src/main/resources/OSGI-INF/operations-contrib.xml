@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<component 	name="org.athento.csv.operations"
+	version="1.0.0">
+	<require>org.nuxeo.runtime.started</require>
+	<!-- Uses operations contributed before -->
+	<extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent"
+		point="chains">
+		<chain id="import_sample">
+			<operation id="Auth.LoginAs">
+				<param type="string" name="name">Administrator</param>
+			</operation>
+			<operation id="Context.SetVar">
+				<param type="string" name="name">folderToCheck</param>
+				<param type="object" name="value">/default-domain/workspaces/CSV/src</param>
+			</operation>
+			<operation id="Context.SetVar">
+				<param type="string" name="name">folderToPut</param>
+				<param type="object" name="value">/default-domain/workspaces/CSV/dst</param>
+			</operation>
+			<operation id="Athento.ImportCSVFiles">
+				<param type="String" name="folderToCheck">expr:folderToCheck</param>
+				<param type="String" name="folderToPut">expr:folderToPut</param>
+			</operation>
+			<operation id="Auth.Logout" />
+		</chain>
+ 	</extension>
+</component>

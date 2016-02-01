@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component name="org.athento.nuxeo.csv.eventhandler"
+	version="1.0.0">
+	<require>org.nuxeo.runtime.started</require>
+	<extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent"
+		point="event-handlers">
+		<handler chainId="import_sample">
+			<event>import_csv_every_5_minutes</event>
+		</handler>
+	</extension>
+</component>

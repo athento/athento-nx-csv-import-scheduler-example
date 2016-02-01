@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<component name="org.athento.csv.import.scheduler">
+	<extension target="org.nuxeo.ecm.core.scheduler.SchedulerService"
+		point="schedule">
+		<require>org.nuxeo.runtime.started</require>
+		<schedule id="monthly_stuff">
+			<username>Administrator</username>
+			<eventId>import_csv_every_5_minutes</eventId>
+			<eventCategory>default</eventCategory>
+			<username>Administrator</username>
+			<!--  For testing purposes -->
+			<cronExpression>0 0/5 * * * ?</cronExpression>
+		</schedule>
+	</extension>
+</component>
