@@ -3,13 +3,13 @@
 	<extension target="org.nuxeo.ecm.core.scheduler.SchedulerService"
 		point="schedule">
 		<require>org.nuxeo.runtime.started</require>
-		<schedule id="monthly_stuff">
+		<schedule id="every_minute">
 			<username>Administrator</username>
-			<eventId>import_csv_every_5_minutes</eventId>
+			<eventId>import_csv_every_minute</eventId>
 			<eventCategory>default</eventCategory>
 			<username>Administrator</username>
 			<!--  For testing purposes -->
-			<cronExpression>0 0/5 * * * ?</cronExpression>
+			<cronExpression>0 0/1 * * * ?</cronExpression>
 		</schedule>
 	</extension>
 </component>
